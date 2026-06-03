@@ -134,7 +134,7 @@ h3 {
 .section-heading { margin-bottom: 1rem; }
 .cards, .visit-grid, .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .sources-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-.sources-grid .card { display: flex; flex-direction: column; justify-content: center; }
+.sources-grid .card { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%; }
 .demo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 
 .feature { min-height: 160px; }
