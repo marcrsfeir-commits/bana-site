@@ -188,10 +188,11 @@ h3 {
 .demo-video {
   width: 100%;
   max-width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 9;
   border-radius: 18px;
   background: #000;
   display: block;
+  border: none;
 }
 
 .story-grid { grid-template-columns: 1.1fr 0.9fr; align-items: stretch; }
