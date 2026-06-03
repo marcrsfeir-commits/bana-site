@@ -205,6 +205,7 @@ h3 {
   background: linear-gradient(135deg, #22304a, #6c8f7d);
   color: #fff;
 }
+.quote-card p { color: #fff; }
 
 .footer {
   display: flex;
