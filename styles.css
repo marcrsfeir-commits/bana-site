@@ -25,6 +25,8 @@
   object-fit: cover;
   opacity: 0.25;
   transition: opacity 1.5s ease;
+  will-change: transform;
+  transform: translateZ(0);
 }
 html { scroll-behavior: smooth; }
 body {
