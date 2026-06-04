@@ -3,7 +3,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Smooth loop for backdrop video — fade out near end, fade in at start
 const backdropVideo = document.querySelector('.video-backdrop video');
 if (backdropVideo) {
-  const fadeDuration = 1.5; // seconds to fade
+  const fadeDuration = 1.5;
 
   backdropVideo.addEventListener('timeupdate', () => {
     const remaining = backdropVideo.duration - backdropVideo.currentTime;
@@ -23,12 +23,17 @@ if (backdropVideo) {
   });
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', e => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const id = link.getAttribute('href').slice(1);
+      const target = id === 'top'
+        ? document.body
+        : document.getElementById(id) || document.querySelector('[name="' + id + '"]');
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
 });
