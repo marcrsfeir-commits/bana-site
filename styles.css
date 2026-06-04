@@ -10,14 +10,27 @@
 }
 
 * { box-sizing: border-box; }
+
+.video-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-backdrop video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+}
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(circle at top, rgba(255, 157, 77, 0.14), transparent 28%),
-    linear-gradient(180deg, #fffaf5 0%, #fff 100%);
+  background: transparent;
 }
 
 img { max-width: 100%; }
