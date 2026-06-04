@@ -24,6 +24,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.25;
+  transition: opacity 1.5s ease;
 }
 html { scroll-behavior: smooth; }
 body {
